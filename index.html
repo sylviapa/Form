@@ -5,50 +5,50 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Form</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css">  
 </head>
 <body>
     <header>
-        <form name="form1" action="https://bucs601.com/submit.php" method="post">
+        <form name="form1" action="https://bucs601.com/submit.php" method="post" novalidate onsubmit="return validateForm();">
             <p>
                 <label for="firstName">First Name:</label>
-                <input type="text" name='firstName' id="firstName">
+                <input type="text" name='firstName' id="firstName" required>
             </p>
             <p>
                 <label for="lastName">Last Name:</label>
-                <input type="text" name='lastName' id="lastName">
+                <input type="text" name='lastName' id="lastName" required>
             </p>
             <p>
                 <label for="facilitator">Facilitator:</label>
-                <input type="text" name='facilitator' id="facilitator">
+                <input type="text" name='facilitator' id="facilitator" required>
             </p>
 
             <fieldset>
                 <legend>How would you evaluate the course?</legend>
-                <input type="radio" name="courvalue1" value="5score"><label for="courvalue1">5</label><br>
-                <input type="radio" name="courvalue2" value="4score"><label for="courvalue2">4</label><br>
-                <input type="radio" name="courvalue3" value="3score"><label for="courvalue3">3</label><br>
-                <input type="radio" name="courvalue4" value="2score"><label for="courvalue4">2</label><br>
-                <input type="radio" name="courvalue5" value="1score"><label for="courvalue5">1</label>
+                <input type="radio" name="courvalue" value="5score">5<br>
+                <input type="radio" name="courvalue" value="4score">4<br>
+                <input type="radio" name="courvalue" value="3score">3<br>
+                <input type="radio" name="courvalue" value="2score">2<br>
+                <input type="radio" name="courvalue" value="1score">1
                 </fieldset>
+
+            <br>
 
             <fieldset>
                 <legend>How would you like to be contacted in the future?</legend>
-                <input type="checkbox" name="cbContact1" value="E-mail"><label for="cbContact1">E-mail</label><br>
-                <input type="checkbox" name="cbContact2" value="textmsg"><label for="cbContact1">Text Message</label><br>
-                <input type="checkbox" name="cbContact3" value="phone"><label for="cbContact3">Phone Call</label><br>
-                <input type="checkbox" name="cbContact4" value="bumsg"><label for="cbContact4">BU Message</label>
+                <input type="checkbox" name="cbContact1" value="E-mail">E-mail<br>
+                <input type="checkbox" name="cbContact2" value="textmsg">Text Message<br>
+                <input type="checkbox" name="cbContact3" value="phone">Phone Call<br>
+                <input type="checkbox" name="cbContact4" value="bumsg">BU Message
                 </fieldset>
-
+            <p id="errorMessage">
+            </p>
             <p>
                 <input type="submit" name="submitbutton" value="Submit">
             </p>
         </form>
 
-
-
-        <script src="calculator.js"></script>
-
+        <script src="form.js"></script>
     </header>
 </body>
 </html>
